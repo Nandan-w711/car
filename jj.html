@@ -1,5 +1,5 @@
-
-
+<!DOCTYPE html>
+<html>
 
 <head>
   <meta charset="UTF-8" />
@@ -13,16 +13,15 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh; /* <- this helps */
+      min-height: 100vh;
       margin: 0;
     }
-
 
     .fb-container {
       background-color: lightpink;
       padding: 20px 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       width: 300px;
     }
 
@@ -36,9 +35,6 @@
       box-sizing: border-box;
     }
 
-    .fb-input::placeholder {
-      color: #90949c;
-    }
     .fb-input::placeholder {
       color: #90949c;
     }
@@ -58,21 +54,23 @@
     .fb-btn-primary:hover {
       background-color: black;
     }
-    .fb-btn-secondary{
-        width: 100%;
-        background-color:  green;
-        color: white;
-        border: none;
-        padding: 10px 16px;
-        font-size: 15px;
-        font-weight: bold;
-        border-radius: 20px;
-        cursor: pointer;
-      }
 
-      .fb-btn-secondary:hover {
-        background-color: blueviolet;
-      }
+    .fb-btn-secondary {
+      width: 100%;
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      font-size: 15px;
+      font-weight: bold;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .fb-btn-secondary:hover {
+      background-color: blueviolet;
+    }
+
     .fb-btn-small {
       width: auto;
       background-color: blue;
@@ -85,32 +83,30 @@
       display: inline-block;
     }
 
-
-      .fb-btn-small:hover {
-        background-color: black;
-      }
-
-
-
-
+    .fb-btn-small:hover {
+      background-color: black;
+    }
   </style>
 </head>
+
 <body>
   <main>
-    <h1 style="color:purple">Palock's Art Gallery</h1></main>
+    <h1 style="color:purple">Palock's Art Gallery</h1>
+  </main>
+
   <div class="fb-container">
-    <input type="text" class="fb-input" placeholder="What's on your mind,PALOCK ?" >
-      <input type="text" class="fb-input" placeholder="Email or Phone Number">
+    <form action="welcome.html" method="POST">
+      <label for="email">Email or Phone Number</label>
+      <input type="text" class="fb-input" placeholder="Email or Phone Number" id="email" name="email" required>
 
-    <input type="text" class="fb-input" placeholder="Password">
-    <button class="fb-btn-primary" style="margin-bottom:10px;">Login</button>
-    <button class="fb-btn-secondary"style="margin-bottom:10px;">Create an Account</button>
-     <button class="fb-btn-small">Forgot Password?</button>
+      <label for="password">Password</label>
+      <input type="password" class="fb-input" placeholder="Password" id="password" name="password" required>
 
+      <button type="submit" class="fb-btn-primary" style="margin-bottom:10px;">Login</button>
+      <button type="button" class="fb-btn-secondary" style="margin-bottom:10px;">Create an Account</button>
+      <button type="button" class="fb-btn-small">Forgot Password?</button>
+    </form>
   </div>
-  
-     
-
 </body>
-</html> 
 
+</html>
