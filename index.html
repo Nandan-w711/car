@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
   <style>
     body {
@@ -56,29 +55,93 @@
       color: black;
       line-height: 1.6;
     }
+
+    .svg-header {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+
+    svg {
+      max-width: 100%;
+      height: auto;
+    }
   </style>
 </head>
 
 <body>
+
+  <!-- SVG Header Ellipse -->
+  <div class="svg-header" aria-label="Palock's Art Gallery Logo">
+    <svg width="600" height="220" viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+      <title id="title">Palock's Art Gallery Logo</title>
+      <desc id="desc">An ellipse with a lime to light yellow gradient background, a white star logo, and cyan text with black outline and shadow.</desc>
+      <defs>
+        <!-- Gradient Background -->
+        <linearGradient id="grad1">
+          <stop offset="0%" stop-color="lime" />
+          <stop offset="100%" stop-color="lightyellow" />
+        </linearGradient>
+
+        <!-- Shadow Effect -->
+        <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+          <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="black" />
+        </filter>
+      </defs>
+
+      <!-- Ellipse Background -->
+      <ellipse cx="300" cy="110" rx="240" ry="80" fill="url(#grad1)" />
+
+      <!-- Star Logo -->
+      <path
+        d="M300,55 l10,30 h30 l-25,18 10,30 -25,-18 -25,18 10,-30 -25,-18 h30z"
+        fill="white"
+        stroke="black"
+        stroke-width="1"
+      />
+
+      <!-- Text Label -->
+      <text
+        x="300"
+        y="160"
+        text-anchor="middle"
+        font-size="30"
+        font-family="Verdana"
+        fill="cyan"
+        stroke="black"
+        stroke-width="1"
+        filter="url(#shadow)"
+        font-weight="bold"
+      >
+        Palock's Art Gallery
+      </text>
+    </svg>
+  </div>
+
   <main>
-   <h1 class="title" style="color:purple;">Welcome to Palock's Art Gallery</h1>
     <section class="grid">
       <a href="jj.html" class="card">
         <h2>Create an Account &rarr;</h2>
         <p>Click on it to sign in</p>
+      </a>
+
       <a href="f.html" class="card">
         <h2>Paintings &rarr;</h2>
         <p>Click on it to see beautiful paintings.</p>
       </a>
 
       <a href="about.html" class="card">
-        <h2>About Palock&rarr;</h2>
+        <h2>About Palock &rarr;</h2>
         <p>Artist</p>
-        <a href="hh.html" class="card">
-          <h2>Date & Time &rarr;</h2>
-          <p>Click on it to see current date and time</p>
+      </a>
+
+      <a href="hh.html" class="card">
+        <h2>Date & Time &rarr;</h2>
+        <p>Click on it to see current date and time</p>
       </a>
     </section>
   </main>
+
 </body>
 </html>
